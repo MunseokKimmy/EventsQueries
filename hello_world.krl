@@ -19,4 +19,8 @@ ruleset hello_world {
       select when echo hello
       send_directive("say", {"something": "Hello World"})
     }  
+    rule hello_monkey {
+      select when echo monkey
+      send_directive("say", {"someting": "Hello Monkey"})
+    }
   }
