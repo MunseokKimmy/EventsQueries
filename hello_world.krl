@@ -8,9 +8,9 @@ ruleset hello_world {
       shares hello
     }
      
-    global {
+    globalafasdfasd{
       hello = function(obj) {
-        msg = "Hello " + obj;
+        msg = "Hello the " + obj;
         msg
       }
     }
