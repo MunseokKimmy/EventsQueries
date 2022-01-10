@@ -10,7 +10,7 @@ ruleset hello_world {
      
     global {
       hello = function(obj) {
-        msg = "Hello the " + obj;
+        msg = "Hello" + obj;
         msg
       }
     }
