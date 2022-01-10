@@ -18,7 +18,8 @@ ruleset hello_world {
     rule hello_world {
       select when echo hello
       send_directive("say", {"something": "Hello World"})
-    }  
+    }
+    
     rule hello_monkey {
       select when echo monkey
       pre {
