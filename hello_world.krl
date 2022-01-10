@@ -8,12 +8,12 @@ ruleset hello_world {
       shares hello
     }
      
-    // global {
-    //   hello = function(obj) {
-    //     msg = "Hello " + obj;
-    //     msg
-    //   }
-    // }
+    global {
+      hello = function(obj) {
+        msg = "Hello " + obj;
+        msg
+      }
+    }
      
     rule hello_world {
       select when echo hello
