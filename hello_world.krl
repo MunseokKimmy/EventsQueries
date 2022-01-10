@@ -22,7 +22,7 @@ ruleset hello_world {
     rule hello_monkey {
       select when echo monkey
       pre {
-        name = event:attr("name").klog("name: ")
+        name = event:attr{"name"}.klog("name: ")
       }
       send_directive("say", {"something": "Hello " + name})
     }
