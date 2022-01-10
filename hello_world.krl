@@ -8,12 +8,12 @@ ruleset hello_world {
       shares hello
     }
      
-    global {
-      hello = function(obj) {
-        msg = "Hello " + obj;
-        msg
-      }
-    }
+    // global {
+    //   hello = function(obj) {
+    //     msg = "Hello " + obj;
+    //     msg
+    //   }
+    // }
      
     rule hello_world {
       select when echo hello
@@ -21,6 +21,9 @@ ruleset hello_world {
     }  
     rule hello_monkey {
       select when echo monkey
-      send_directive("say", {"someting": "Hello Monkey"})
+      pre {
+        name = event:attr("name").klog("name: ")
+      }
+      send_directive("say", {"something": "Hello " + name})
     }
   }
