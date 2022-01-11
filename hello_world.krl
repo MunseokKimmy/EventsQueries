@@ -25,13 +25,7 @@ ruleset hello_world {
       pre {
         name = event:attr{"name"}.klog("name: ")
       }
-      if name == null then
-        send_directive("say", {"something": "Hello Monkey"})
-      fired {
-        //send_directive("say", {"something": "Hello " + name})
-      } else {
-        //send_directive("say", {"something": "Hello Monkey"})
-      }
+      send_directive("say", {"something:": "Hello " + name})// || send_directive("say," {"something:": "Hello Monkey"})
 
     }
   }
