@@ -25,7 +25,7 @@ ruleset hello_world {
       pre {
         name = event:attr{"name"}.klog("passed in name: ")
       }
-      send_directive("say", {"something": "Hello " + obj})// || send_directive("say," {"something:": "Hello Monkey"})
+      send_directive("say", {"something": "Hello " + name})// || send_directive("say," {"something:": "Hello Monkey"})
 
     }
   }
