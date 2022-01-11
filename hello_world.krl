@@ -23,9 +23,9 @@ ruleset hello_world {
     rule hello_monkey {
       select when echo monkey
       pre {
-        name = event:attr{"name"}.klog("name: ")
+        name = event:attr{"name"}.klog("passed in name: ")
       }
-      send_directive("say", {"something:": "Hello " + name})// || send_directive("say," {"something:": "Hello Monkey"})
+      send_directive("say", {"something": "Hello " + obj})// || send_directive("say," {"something:": "Hello Monkey"})
 
     }
   }
